@@ -26,6 +26,7 @@ class ViewController: NSViewController {
 
     eventsControllers = [
       eventControllersBuilder.launchEventsController(),
+      eventControllersBuilder.downloadedFilesEventsController(),
     ]
 
     setupStartStopAvailability()

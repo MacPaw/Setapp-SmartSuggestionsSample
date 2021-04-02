@@ -23,7 +23,9 @@
 		681BB20225D58A4500FF338C /* STPApplicationPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20125D58A4500FF338C /* STPApplicationPromotion.swift */; };
 		681BB20525D58FD500FF338C /* STPPromotionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20425D58FD500FF338C /* STPPromotionPresenter.swift */; };
 		681BB20825D5903000FF338C /* STPEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20725D5903000FF338C /* STPEventController.swift */; };
+		682709EB261722BC002AD4BF /* STPDownloadedFilesEventProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682709EA261722BC002AD4BF /* STPDownloadedFilesEventProcessor.swift */; };
 		68350140261718E800318069 /* STPEventControllersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835013F261718E800318069 /* STPEventControllersBuilder.swift */; };
+		6835014C26171B1400318069 /* STPDownloadedFilesEventProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835014B26171B1400318069 /* STPDownloadedFilesEventProducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +47,9 @@
 		681BB20125D58A4500FF338C /* STPApplicationPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPApplicationPromotion.swift; sourceTree = "<group>"; };
 		681BB20425D58FD500FF338C /* STPPromotionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPPromotionPresenter.swift; sourceTree = "<group>"; };
 		681BB20725D5903000FF338C /* STPEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPEventController.swift; sourceTree = "<group>"; };
+		682709EA261722BC002AD4BF /* STPDownloadedFilesEventProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPDownloadedFilesEventProcessor.swift; sourceTree = "<group>"; };
 		6835013F261718E800318069 /* STPEventControllersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPEventControllersBuilder.swift; sourceTree = "<group>"; };
+		6835014B26171B1400318069 /* STPDownloadedFilesEventProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPDownloadedFilesEventProducer.swift; sourceTree = "<group>"; };
 		68C988EA25D6B3DC0044E82D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				681BB1EF25D588FB00FF338C /* STPPromotionEvent.swift */,
+				6835014426171A2100318069 /* DownloadedFiles */,
 				683501432617199F00318069 /* LaunchedApps */,
 			);
 			path = "Promotions Sample";
@@ -164,6 +169,15 @@
 				681BB19B25D529DE00FF338C /* STPLaunchedAppsEventProducer.swift */,
 			);
 			path = LaunchedApps;
+			sourceTree = "<group>";
+		};
+		6835014426171A2100318069 /* DownloadedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6835014B26171B1400318069 /* STPDownloadedFilesEventProducer.swift */,
+				682709EA261722BC002AD4BF /* STPDownloadedFilesEventProcessor.swift */,
+			);
+			path = DownloadedFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				681BB20825D5903000FF338C /* STPEventController.swift in Sources */,
+				6835014C26171B1400318069 /* STPDownloadedFilesEventProducer.swift in Sources */,
 				681BB1B625D5315000FF338C /* STPLaunchedAppsEventProcessor.swift in Sources */,
 				681BB1E825D5884B00FF338C /* UNAuthorizationOptions.swift in Sources */,
 				681BB1F025D588FB00FF338C /* STPPromotionEvent.swift in Sources */,
+				682709EB261722BC002AD4BF /* STPDownloadedFilesEventProcessor.swift in Sources */,
 				681BB1E325D587C300FF338C /* STPDispatchQueueFactory.swift in Sources */,
 				681BB1F425D5891000FF338C /* STPEventProducer.swift in Sources */,
 				681BB20525D58FD500FF338C /* STPPromotionPresenter.swift in Sources */,
