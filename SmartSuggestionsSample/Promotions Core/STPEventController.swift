@@ -15,16 +15,22 @@ class STPEventController: STPEventProducerDelegate {
   private let processor: STPEventProcessor
   /// Application promotions presenter.
   private let presenter: STPPromotionPresenter
+  /// Promotion builder.
+  ///
+  /// Builds promotion based on event.
+  private let promotionBuilder: (STPPromotionEvent) -> STPApplicationPromotion
 
   init(
     producer: STPEventProducer,
     processor: STPEventProcessor,
-    presenter: STPPromotionPresenter
+    presenter: STPPromotionPresenter,
+    promotionBuilder: @escaping (STPPromotionEvent) -> STPApplicationPromotion
   )
   {
     self.producer = producer
     self.processor = processor
     self.presenter = presenter
+    self.promotionBuilder = promotionBuilder
 
     producer.delegate = self
   }
@@ -46,17 +52,9 @@ class STPEventController: STPEventProducerDelegate {
   ///
   /// - Parameter event: A produced event.
   func didProduceEvent(_ event: STPPromotionEvent) {
-    processor.process(event: event) { [presenter] (canProcess) in
+    processor.process(event: event) { [presenter, promotionBuilder] (canProcess) in
       guard canProcess else { return }
-
-      // Q: Will promotion texts be used for my app promotion?
-      // A: If we like it - it will be used.
-
-      let promotion = STPApplicationPromotion(title: "Tired of boring notes apps?",
-                                              subtitle: "Try AwesomeNotes. It's in Setapp!",
-                                              body: "Encrypted 😱 notes with collaboration support 👍.")
-
-      presenter.present(applicationPromotion: promotion) { (wasPresented) in
+      presenter.present(applicationPromotion: promotionBuilder(event)) { (wasPresented) in
         if wasPresented {
           print("Yay! The app was promoted 🎉!")
         } else {

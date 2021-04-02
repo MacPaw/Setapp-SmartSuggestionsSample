@@ -25,7 +25,15 @@ class STPEventControllersBuilder {
       producer: STPLaunchedAppsEventProducer(),
       processor: processor,
       presenter: STPDefaultPromotionPresenter()
-    )
+    ) { _ in
+      // Q: Will promotion texts be used for my app promotion?
+      // A: If we like it - it will be used.
+
+      STPApplicationPromotion(title: "Tired of boring notes apps?",
+                              subtitle: "Try AwesomeNotes. It's in Setapp!",
+                              body: "Encrypted 😱 notes with collaboration support 👍.")
+      
+    }
 
     return launchEventsController
   }
