@@ -97,8 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				681BB1EF25D588FB00FF338C /* STPPromotionEvent.swift */,
-				681BB19B25D529DE00FF338C /* STPLaunchedAppsEventProducer.swift */,
-				681BB1B525D5315000FF338C /* STPLaunchedAppsEventProcessor.swift */,
+				683501432617199F00318069 /* LaunchedApps */,
 			);
 			path = "Promotions Sample";
 			sourceTree = "<group>";
@@ -156,6 +155,15 @@
 				681BB19125D5282E00FF338C /* Info.plist */,
 			);
 			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		683501432617199F00318069 /* LaunchedApps */ = {
+			isa = PBXGroup;
+			children = (
+				681BB1B525D5315000FF338C /* STPLaunchedAppsEventProcessor.swift */,
+				681BB19B25D529DE00FF338C /* STPLaunchedAppsEventProducer.swift */,
+			);
+			path = LaunchedApps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
