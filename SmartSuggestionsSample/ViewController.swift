@@ -13,7 +13,7 @@ class ViewController: NSViewController {
   @IBOutlet private var startButton: NSButton!
   @IBOutlet private var stopButton: NSButton!
 
-  private var eventsController: STPEventController!
+  private var eventsControllers: [STPEventController]!
 
   private var isStarted: Bool = false {
     didSet { setupStartStopAvailability() }
@@ -22,21 +22,11 @@ class ViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let processor = STPLaunchedAppsEventProcessor {
-      let competitorsBundleIDs: [String] = [
-        "com.apple.Notes",
-        "com.box.box-notes",
-        "net.shinyfrog.bear",
-      ]
+    let eventControllersBuilder = STPEventControllersBuilder()
 
-      return competitorsBundleIDs.map(STPPromotionEvent.didLaunchApp).contains($0)
-    }
-
-    eventsController = STPEventController(
-      producer: STPLaunchedAppsEventProducer(),
-      processor: processor,
-      presenter: STPDefaultPromotionPresenter()
-    )
+    eventsControllers = [
+      eventControllersBuilder.launchEventsController(),
+    ]
 
     setupStartStopAvailability()
   }
@@ -48,12 +38,12 @@ class ViewController: NSViewController {
 
   @IBAction private func startPressed(_ sender: NSButton) {
     isStarted = true
-    eventsController.start()
+    eventsControllers.forEach { $0.start() }
   }
 
   @IBAction private func stopPressed(_ sender: NSButton) {
     isStarted = false
-    eventsController.stop()
+    eventsControllers.forEach { $0.stop() }
   }
 }
 

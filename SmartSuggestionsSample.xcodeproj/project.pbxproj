@@ -23,6 +23,7 @@
 		681BB20225D58A4500FF338C /* STPApplicationPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20125D58A4500FF338C /* STPApplicationPromotion.swift */; };
 		681BB20525D58FD500FF338C /* STPPromotionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20425D58FD500FF338C /* STPPromotionPresenter.swift */; };
 		681BB20825D5903000FF338C /* STPEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BB20725D5903000FF338C /* STPEventController.swift */; };
+		68350140261718E800318069 /* STPEventControllersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835013F261718E800318069 /* STPEventControllersBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		681BB20125D58A4500FF338C /* STPApplicationPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPApplicationPromotion.swift; sourceTree = "<group>"; };
 		681BB20425D58FD500FF338C /* STPPromotionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPPromotionPresenter.swift; sourceTree = "<group>"; };
 		681BB20725D5903000FF338C /* STPEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPEventController.swift; sourceTree = "<group>"; };
+		6835013F261718E800318069 /* STPEventControllersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPEventControllersBuilder.swift; sourceTree = "<group>"; };
 		68C988EA25D6B3DC0044E82D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 			children = (
 				681BB19A25D529AF00FF338C /* Promotions Sample */,
 				681BB18A25D5282D00FF338C /* ViewController.swift */,
+				6835013F261718E800318069 /* STPEventControllersBuilder.swift */,
 				681BB18825D5282D00FF338C /* AppDelegate.swift */,
 				681BB1EE25D588E000FF338C /* Promotions Core */,
 				681BB1E025D587B200FF338C /* Tools */,
@@ -233,6 +236,7 @@
 				681BB1F425D5891000FF338C /* STPEventProducer.swift in Sources */,
 				681BB20525D58FD500FF338C /* STPPromotionPresenter.swift in Sources */,
 				681BB19C25D529DE00FF338C /* STPLaunchedAppsEventProducer.swift in Sources */,
+				68350140261718E800318069 /* STPEventControllersBuilder.swift in Sources */,
 				681BB18B25D5282D00FF338C /* ViewController.swift in Sources */,
 				681BB1F825D5895600FF338C /* STPEventProcessor.swift in Sources */,
 				681BB18925D5282D00FF338C /* AppDelegate.swift in Sources */,
