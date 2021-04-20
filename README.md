@@ -1,5 +1,3 @@
-# Implement smart suggestions: repo guide for Vendors
-
 ## About this repository
 
 With smart suggestions, Setapp gives personalized recommendations to its users. For example, when a MacBook is unplugged from a power outlet, Setapp suggests an app that optimizes power consumption or battery usage.
