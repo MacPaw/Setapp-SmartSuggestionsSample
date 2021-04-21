@@ -16,4 +16,6 @@ import Foundation
 enum STPPromotionEvent: Hashable {
   /// An application did launch.
   case didLaunchApp(bundleID: String)
+  /// A new file appeared in Downloads folder.
+  case didDownloadFile(path: URL)
 }
